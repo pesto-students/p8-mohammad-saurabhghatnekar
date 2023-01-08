@@ -10,7 +10,7 @@ function createStack() {
 
 //fix the code above to make the items private
 
-const stack = (function () {
+const createStackFixed = (function () {
     let items = [];
     function pushItem(item) {
         items.push(item);
@@ -32,8 +32,9 @@ const stack = (function () {
             return items;
         }
     };
-})();
+});
 
+const stack = createStackFixed();
 stack.push(10);
 stack.push(5);
 stack.pop();// => 5
